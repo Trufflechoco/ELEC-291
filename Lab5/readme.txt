@@ -1,1 +1,4 @@
-Comments when handing in
+Partner: Kevin Chen (14480321)
+
+Extra Functions:
+
