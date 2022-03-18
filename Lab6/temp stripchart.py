@@ -39,6 +39,7 @@ def data_gen():
         strin1=strin[1]
         strin2=strin1.split("deg")
         val = float(strin2[0])
+        print(val)
         yield t, val
 
 def run(data):
