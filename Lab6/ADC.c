@@ -56,6 +56,9 @@ void main(void)
     int adcval;
     float voltage;
     float temperature;
+    float temperaturef;
+    float temperaturek;
+
 
 	CFGCON = 0;
   
@@ -80,10 +83,26 @@ void main(void)
         	adcval = ADCRead(5); // note that we call pin AN5 (RB3) by it's analog number
         	voltage=adcval*3.3/1023.0;
         	temperature = (voltage*100.0)-273.0;
-        	printf("AN5=0x%04x,%.3fdeg\r", adcval, temperature);
+            temperaturef = (temperature *9.0/5.0) + 32.0;
+            temperaturek = temperature + 273.15;
+        	printf("AN5=0x%04x,%.3fdeg\r\n", adcval, temperature);
+            printf("%.3ffahrenheit\r\n",  temperaturef);
+            printf("%.3fkelvin\r\n", temperaturek);
         	fflush(stdout);
 			t = 0;
 			LATBbits.LATB6 = !LATBbits.LATB6; // Blink led on RB6
 		}
+
+        if(temperature >= 30)
+        {
+            printf("WARNING: HIGH TEMPERATURE!\r\n");
+
+        }
+
+        if(temperature <= 20)
+        {
+            printf("WARNING: LOW TEMPERATURE!\r\n");
+
+        }
 	}
 }
