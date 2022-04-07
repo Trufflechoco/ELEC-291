@@ -13,3 +13,4 @@ Extra functions:
 1) Resiliency - Does not break after large fall
 2) Spins in "victory" after picking up 4 coins
 3) LED flashes when cart stops to pick up coins
+4) Once perimeter detector senses perimeter, it will turn an angle generated from a random number generator - increases efficiency in comparison to hard coding
