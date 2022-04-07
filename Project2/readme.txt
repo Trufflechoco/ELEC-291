@@ -12,3 +12,4 @@ Our robot is able to sense a coin, pick a coin up, place it in the coin box, and
 Extra functions:
 1) Resiliency - Does not break after large fall
 2) Spins in "victory" after picking up 4 coins
+3) LED flashes when cart stops to pick up coins
