@@ -1,3 +1,3 @@
 # ELEC-291
 
-Lab code
+Project 1 code https://github.com/TemperanceXIV/ELEC291_Project_1
